@@ -1,0 +1,46 @@
+<%# [Pizza Modifer Component] _%>
+<%# Options: Object _%>
+<%# toIdName: Function _%>
+<%# modifier: String _%>
+<%# selected: Object _%>
+<%# [size: String] _%>
+
+    <table class="<%- modifier.toLowerCase(); %>-container">
+      <tr>
+        <td>
+          <h3>Select <%- modifier _%></h3>
+        </td>
+        <%_ if(modifier === "Sauce") { _%>
+        <td>
+          <%- include("Component__DropdownSelector", {
+                classname: "Sauce Modifier",
+                Options: Sauce.Mod,
+                id: "sauceDropdownMenuButton",
+                selected: Item.Options.Sauce[1]
+          }) _%>
+
+        </td>
+        <%_ } _%>
+      </tr>
+    
+<% let optionKeys = Object.keys(Options); %>    
+    <% let disabled = false %>
+    <% for (let i = 0; i < optionKeys.length; i++) { %>
+      <% let key = optionKeys[i]; %>
+      <%_ if(key !== "Mod") { _%>
+        <% if(Object.keys(Options[key].Price).findIndex(size => size === Item.size) === -1) { %>
+          <% disabled = true %>
+        <% } %>
+         
+        
+      <tr>
+        <td <%_ if (modifier === "Sauce" && Item.Options.Sauce[1] === "None") { %> style="display: none;"<%_ } _%>>
+          <input onclick="selectMod({ modifier: '<%- modifier %>', options: '<%- key %>' });" <% if(disabled === true) { %> data-toggle="tooltip" data-placement="right" data-title="<%- optionKeys[i] %> is not available in this size" disabled <% } %> type="radio" id="<%- toIdName(key) %>" name="<%- modifier.toLowerCase() %>" value="<%- key %>" <% if(toIdName(selected) == toIdName(key)) { %> checked <% } %>/>
+          <span class="lead <% if (disabled === true) { %> text-muted <% } %>"><label for="<%- toIdName(key) %>"><%- key %></label></span>
+        </td>
+      </tr>
+      <%_ } _%><%# end if %>
+    <% } %> <%# end for %>
+    </table>
+
+

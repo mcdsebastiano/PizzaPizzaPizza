@@ -1,0 +1,339 @@
+{
+	"Pizzas": {
+		"Pepperoni": {
+			"Options": {
+				"Toppings": {
+					"Whole": ["Pepperoni"],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "A Pepperoni pizza",
+			"Image": "/images/pizzas/pepperoni.jpg",
+			"_image_attribution": "Food photo created by freepik - www.freepik.com",
+			"Price": {
+				"12in": 12.99,
+				"14in": 15.99,
+				"16in": 15.99
+			}
+		},
+		"Deluxe": {
+			"Options": {
+				"Toppings": {
+					"Whole": ["Pepperoni", "Sausage", "Green Peppers", "Mushrooms", "Black Olives", "Corn"],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "A Deluxe Pizza",
+			"Image": "/images/pizzas/deluxe.jpg",
+			"_image_attribution": "Food photo created by stockking - www.freepik.com",
+			"Price": {
+				"12in": 12.99,
+				"14in": 15.99,
+				"16in": 17.99
+			}
+		},
+		"Hawaiian": {
+			"Options": {
+				"Toppings": {
+					"Whole": ["Ham", "Pineapple"],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "A Hawaiian Pizza",
+			"Image": "/images/pizzas/hawaiian.jpg",
+			"_image_attribution": "Food photo created by lifeforstock - www.freepik.com",
+			"Price": {
+				"12in": 12.99,
+				"14in": 15.99,
+				"16in": 17.99
+			}
+		},
+		"Margherita": {
+			"Options": {
+				"Toppings": {
+					"Whole": ["Tomatoes"],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "A Margherita Pizza, fresh basil and mozzarella",
+			"Image": "/images/pizzas/margherita.jpg",
+			"_image_attribution": "Food photo created by lifeforstock - www.freepik.com",
+			"Price": {
+				"12in": 12.99,
+				"14in": 15.99,
+				"16in": 17.99
+			}
+		},
+		"Greek": {
+			"Options": {
+				"Toppings": {
+					"Whole": ["Tomatoes", "Roasted Red Peppers", "Mushrooms", "Black Olives", "Red Onion"],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Bechamel Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "A Greek Style Pizza with bechamel sauce",
+			"Image": "/images/pizzas/greek.jpg",
+			"_image_attribution": "Food photo created by stockking - www.freepik.com",
+			"Price": {
+				"12in": 12.99,
+				"14in": 15.99,
+				"16in": 17.99
+			}
+		},
+
+		"Veggie": {
+			"Options": {
+				"Toppings": {
+					"Whole": ["Tomatoes", "Green Peppers", "Mushrooms", "Black Olives", "Red Onion"],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "A Veggie Pizza",
+			"Image": "/images/pizzas/veggie.jpg",
+			"_image_attribution": "Food photo created by mdjaff - www.freepik.com",
+			"Price": {
+				"12in": 12.99,
+				"14in": 15.99,
+				"16in": 17.99
+			}
+		},
+		"Cheese": {
+			"Options": {
+				"Toppings": {
+					"Whole": [],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "Plain and simple cheese pizza.",
+			"Image": "/images/pizzas/cheese.jpg",
+			"_image_attribution": "Food photo created by freepik - www.freepik.com",
+			"Price": {
+				"10in": 7.99,
+				"12in": 12.99,
+				"14in": 14.99,
+				"16in": 15.99
+			}
+		},
+
+		"Build Your Own": {
+			"Options": {
+				"Toppings": {
+					"Whole": [],
+					"Left": [],
+					"Right": []
+				},
+				"Cheese": "Regular",
+				"Sauce": ["Marinara Sauce", "Regular"],
+				"Crust": "Hand Tossed"
+			},
+			"Description": "Build your own.",
+			"Image": "",
+			"Price": {
+				"10in": 6.99,
+				"12in": 8.99,
+				"14in": 10.99,
+				"16in": 12.99
+			}
+		}
+	},
+	"Sides": {
+		"Mozzarella Sticks": {
+			"Description": "",
+			"Image": "/images/sides/mozzasticks.jpg",
+			"Price": {
+				"5pc": 5.99,
+				"8pc": 8.99
+			}
+		},
+		"Chicken Wings": {
+			"Description": "",
+			"Image": "/images/sides/chickenwings.jpg",
+			"_image_attribution": "Food photo created by jcomp - www.freepik.com",
+			"Price": {
+				"1lb": 9.99,
+				"2lb": 17.99
+			}
+		}
+	},
+	"Salads": {
+		"Garden Salad": {
+			"Price": [4.00],
+			"Description": "",
+			"Image": "/images/salads/garden.jpg",
+			"_image_attribution": "Food photo created by timolina - www.freepik.com"
+		},
+		"Caesar Salad": {
+			"Price": [5.50],
+			"Description": "",
+			"Image": "/images/salads/caesar.jpg",
+			"_image_attribution": "Food photo created by lifeforstock - www.freepik.com"
+		}
+	},
+
+	"Beverages": {
+		"Can of Pop": {
+			"Price": {
+				"Sprite": 1,
+				"Coke": 1,
+				"Diet Coke": 1
+			},
+			"Image": "/images/beverages/cans.jpg"
+		},
+		"2 Litre": {
+			"Price": {
+				"Sprite": 4,
+				"Coke": 4,
+				"Diet Coke": 4
+			},
+			"Image": "/images/beverages/2L.jpg"
+		}
+	},
+
+
+	"Options": {
+		"Toppings": {
+			"Regular": {
+				"List": ["Pepperoni", "Ham", "Sausage", "Mushrooms", "Tomatoes", "Green Peppers", "Roasted Red Peppers", "Red Onion", "Black Olives", "Pineapple", "Salami", "Corn"],
+				"Price": {
+					"10in": 0.75,
+					"12in": 1,
+					"14in": 1.30,
+					"16in": 1.50
+				}
+			}
+		},
+		"Cheese": {
+			"Mod": {
+				"Regular": {
+					"Price": {
+						"10in": 0,
+						"12in": 0,
+						"14in": 0,
+						"16in": 0
+					}
+				},
+				"Light": {
+					"Price": {
+						"10in": 0,
+						"12in": 0,
+						"14in": 0,
+						"16in": 0
+					}
+				},
+				"Extra": {
+					"Price": {
+						"10in": 0.75,
+						"12in": 1.00,
+						"14in": 1.30,
+						"16in": 1.50
+					}
+				},
+				"None": {
+					"Price": {
+						"10in": 0,
+						"12in": 0,
+						"14in": 0,
+						"16in": 0
+					}
+				}
+			}
+		},
+		"Sauce": {
+			"Marinara Sauce": {
+				"Price": {
+					"10in": 0,
+					"12in": 0,
+					"14in": 0,
+					"16in": 0
+				}
+			},
+			"Bechamel Sauce": {
+				"Price": {
+					"10in": 1.00,
+					"12in": 1.75,
+					"14in": 2.50,
+					"16in": 3.00
+				}
+			},
+			"Mod": {
+				"Regular": {
+					"Price": {
+						"10in": 0,
+						"12in": 0,
+						"14in": 0,
+						"16in": 0
+					}
+				},
+				"Light": {
+					"Price": {
+						"10in": 0,
+						"12in": 0,
+						"14in": 0,
+						"16in": 0
+					}
+				},
+				"Extra": {
+					"Price": {
+						"10in": 0.75,
+						"12in": 1.00,
+						"14in": 1.30,
+						"16in": 1.50
+					}
+				},
+				"None": {
+					"Price": {
+						"10in": 0,
+						"12in": 0,
+						"14in": 0,
+						"16in": 0
+					}
+				}
+			}
+		},
+		"Crusts": {
+			"Hand Tossed": {
+				"Price": {
+					"10in": 0,
+					"12in": 0,
+					"14in": 0,
+					"16in": 0
+
+				}
+			},
+			"Crunchy Thin": {
+				"Price": {
+					"12in": 0,
+					"14in": 0
+				}
+			}
+		}
+	}
+}

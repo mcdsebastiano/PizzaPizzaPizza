@@ -1,0 +1,50 @@
+<%# [Cart Page] _%>
+<%# Cart: Array _%>
+
+  <h1>Your Cart
+  <%_ if(Cart.length === 0) { _%>
+    ... is empty :(
+  <%_ } _%></h1>  
+  <%_ Cart.items.forEach((item, idx) => { _%>      
+  <% console.log(item) %>
+    <%- include("partials/Tile__Cart", { item, idx, count: item.count }); %>
+  <%_ }); _%>
+  <div class="button-container" style="clear: both;">
+    <a href="/Menu" style="width: 140px;" class="btn btn-lg btn-primary m-1 float-left">Go to Menu</a>
+    <%_ if(Cart.length > 0) { _%>
+    <form action="/cart/checkout" method="POST">
+      <button type="submit" class="btn btn-lg btn-primary m-1 float-right" style="width: 140px;">Checkout</button>
+    </form>
+    <form action="/cart/empty" method="POST">
+      <button class="btn btn-lg btn-primary m-1 float-left" style="width: 140px;">Empty Cart</button>
+    </form>
+  </div>
+  
+  <!-- A bit old school but oh well -->
+  <div style="clear: both;"></div>
+  
+  <div style="float: right;" class="p-2">
+    <h3>Total: </h3>    
+    <h1>$<%- Cart.totalPrice %></h1>
+  </div>
+  <%_ } _%>
+  <br />
+
+
+<script>
+function updateQuantity(count, idx) {
+  $.ajax({
+    method: "POST",
+    async: true,
+    url: "/cart/update-quantity",
+    contentType: "application/json",
+    data: JSON.stringify({
+      count,
+      idx
+    }),
+    success: function (res) {
+      location.reload();
+    }
+  });
+}
+</script>

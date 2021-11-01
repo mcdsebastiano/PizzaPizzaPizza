@@ -1,0 +1,36 @@
+<%# [DropDown Selector Component] _%>
+<%# classname: String   _%>
+<%# Options: Object     _%>
+<%# id: String          _%>
+<%# selected: Object    _%>
+        
+        <div class="dropdown">
+          <button class="mb-3 mt-2 btn btn-lg btn-secondary dropdown-toggle" type="button" id="<%- id %>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%- selected; %>
+          </button>
+          
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <% let optionKeys = Object.keys(Options); %>    
+      <% let disabled = false %>
+      <% for (let i = 0; i < optionKeys.length; i++) { %>
+      <% let key = optionKeys[i]; %>
+      
+          <% if(Object.keys(Options[key].Price).includes(Item.size)) { %>
+            <% disabled = false; %>
+          <% } else { %>
+            <% disabled = true; %>
+          <% } %>
+        
+          <% if (disabled === true) { %>
+            <span  class="<%- classname.toLowerCase(); %> dropdown-item text-muted" data-toggle="tooltip" data-placement="right" data-title="<%- optionKeys[i] %> is not available in this size" style="cursor: not-allowed;"><%- key %></span>
+          <% } else { %>
+        
+            <span onclick="selectMod({ modifier: '<%- classname %>', options: '<%- key %>' })" class="<%- classname.toLowerCase(); %> dropdown-item" style="cursor: pointer;"><%- key %></span>
+          <% } %>
+            
+            
+            
+            
+        <%_ }; _%>
+          </div>
+        </div>

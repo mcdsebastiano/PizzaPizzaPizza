@@ -1,0 +1,35 @@
+<%# [Display Item Page] _%> 
+<%# URL: String _%>
+<%# Path: String _%>
+<%# Category: Object _%>
+<%# item: String _%>
+
+        <h1><%- item _%></h1>
+        <p class="pl-4">
+          <%- category[item].Description %>
+        </p>
+  <%_ if(category[item] !== "undefined" && category[item]) { _%>
+      <div class="border-0 card align-items-center mb-4 mt-4">  
+
+        <div class="row">        
+         <% if(category[item].Image !== "" && typeof category[item].Image !== "undefined") { %> 
+          <div class="col pt-4 pb-4" style="text-align: center;">
+            <img src="<%- category[item].Image _%>" alt="" class="pizza-profile" />
+          </div>
+          <% } %>
+          <div class="col align-self-center">
+      <%- include("Component__PriceSelector", { sizes: Object.keys(category[item].Price), item, Options: category[item].Options !== undefined ? Object.keys(category[item].Options) : [] }) %>
+          </div>
+        </div>
+      </div>
+      
+      <%# needs to be removed eventually %>
+      <% if(typeof category[item]._image_attribution !== "undefined") { %>
+        <p class="text-center"><a href="http://freepik.com/photos/food"><span class="small"><%- category[item]._image_attribution %></span></a></p>
+      <% } %>
+      
+      
+  <%_ } else { _%>
+    <%- include("Display__InvalidItem") _%>
+  <%_ } _%>
+  

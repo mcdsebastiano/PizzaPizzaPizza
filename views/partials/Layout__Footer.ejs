@@ -1,0 +1,17 @@
+    
+    <script src="/libs/popper.js/popper.js"  crossorigin="anonymous"></script>
+    <!-- <script src="/libs/bootstrap/4.3.1/js/bootstrap.min.js"  crossorigin="anonymous"></script> -->
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        if (typeof document.getElementsByClassName('price-selector')[0] !== 'undefined') {
+          (function () {
+            select(document.getElementsByClassName('price-selector')[0]);
+          })();
+        }
+      });
+    </script>
+    <br />
+    <footer class="border-top container-fluid text-center">
+      <p>&copy 2021 by PizzaPizzaPizza</p>
+    </footer>

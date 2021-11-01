@@ -1,0 +1,26 @@
+{
+  "name": "PizzaPizzaPizza",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Montana Sebastiano",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "lodash": "^4.17.21",
+    "stripe": "^8.167.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "nodemon": "^2.0.13"
+  }
+}

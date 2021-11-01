@@ -1,0 +1,204 @@
+* {
+  font-size: 12pt;
+  font-family: 'Alegreya', serif;
+}
+.op-100 {
+  opacity: 1;
+}
+.op-25 {
+  opacity: 0.25;
+}
+
+ul {
+  list-style: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+.content ul li:hover {
+  
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 95%; */
+}
+.bold {
+  font-weight: 400;
+}
+
+table button {
+  margin: 2em;
+}
+
+.topping-checkbox { 
+  display: flex;
+  flex-direction: columns;
+  justify-content: left;
+  align-items: center;
+  height: 75px;
+}
+
+.topping-checkbox > span {
+ 
+}
+
+.carousel-price {
+
+}
+
+.cartitems {
+  /* max-width: 35px; */
+  position: relative; 
+  top: 30%;
+  right: 20%;
+  /* font-size: 13px; */
+  /* font-family: consolas; */
+}
+
+.checked {
+  opacity: 1;
+}
+
+
+.circle {  
+  margin: 0.5em;
+  display: block;
+  border: 1px solid gray;
+  background-color: lightgray;
+  display: block;
+  width: 12px;
+  height: 24px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.circle:hover {
+  opacity: 1;
+}
+
+.half-circle-right {
+  border-bottom-right-radius: 24px;
+  border-top-right-radius: 24px;
+  border-left: 0;
+}
+.half-circle-left {
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-right: 0;
+
+}
+
+.full-circle {
+  border-radius: 24px;
+  width:24px;
+  height: 24px;      
+  -webkit-box-sizing: border-box;1
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.breadcrumb {
+    background-color: white !important;
+    border-radius: 0px !important;
+    margin: 1em !important;
+}
+
+
+
+.price-selector {
+  cursor: pointer;
+  width: 75px; 
+  height: 75px; 
+  outline: none;
+}
+
+
+
+.quantity-modifier {
+  cursor: pointer;
+}
+
+.pizza-profile {
+  width: 750px;  
+}
+
+.select-price:hover {
+  transition: .3s ease;
+  background-color: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.5) !important;
+}
+
+.active {
+  background-color: rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.5) !important;
+}
+.border-toggle {}
+
+@media(max-width: 1056px) {
+  .pizza-profile {
+    width: 550px;
+  }
+}
+@media(max-width:825px) {
+  .pizza-profile {
+    width: 700px;
+  }
+}
+@media(max-width:750px) {
+  .pizza-profile {
+    width: 650px;
+  }
+  nav {
+    text-align: center;
+  }
+}
+@media(max-width:700px) {
+  .pizza-profile {
+    width: 600px;
+  }
+}
+@media(max-width:650px) {
+  .pizza-profile {
+    width: 550px;
+  }
+}
+@media(max-width:602px) {
+   .border-toggle {
+    border: 1px solid rgba(0,0,0,0.125);
+  }
+}
+@media(max-width:600px) {
+  .pizza-profile {    
+    width: 500px;
+  }
+  .border-toggle {    
+    border: none !important;
+  }  
+}
+@media(max-width:500px) {
+  .pizza-profile {    
+    width: 450px;
+  } 
+}
+
+.carousel-inner .active {
+    border: 0px !important;
+}
+
+.carousel-height {
+  max-height: 65vh;
+}
+
+
+
+ul {
+    white-space: nowrap !important;
+}
+
+.navbar-nav li {
+  max-width: 75px;
+    /* display: inline !important; */
+    padding: 1em;
+}

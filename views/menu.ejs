@@ -1,0 +1,10 @@
+<%#[Menu Page]   _%>
+<%# Path: String _%>
+<%# Menu: Object _%>
+<%# MenuCategories: Array _%>
+
+<%_ for (let category of MenuCategories) { _%>
+  <% if(category !== "Options") { _%>
+    <%- include("partials/Tile__Menu", { Items: Object.entries(Menu[category]), category }); _%>  
+  <%_ } _%>
+<%_ } _%>

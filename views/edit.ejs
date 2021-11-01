@@ -1,0 +1,71 @@
+<%# [Pizza Modifier Page] _%>
+<%# Cheese: Object _%>
+<%# Sauce: Object _%>
+<%# Crusts: Object _%>
+<%# Toppings: Array _%>
+<%# Item: Object _%>   
+
+<%_ const toIdName = name => name.replace(/\s/g, "-").toLowerCase() _%>
+    <div class="button-container">
+        <a href="/cart" class="btn btn-lg btn-primary">Back to Cart</a>
+    </div>
+    <h1><%- Item.name %></h1>
+<div style="display: flex; flex-direction:rows; justify-content: center;">
+    <div class="col-sm">
+<%- include("partials/Component__ModifierSelector", { 
+      Options: Crusts, 
+      toIdName, 
+      modifier: "Crusts", 
+      selected: Item.Options.Crust, 
+      size: Item.size 
+}) _%>
+
+<%- include("partials/Component__ModifierSelector", { 
+      Options: Sauce, 
+      toIdName, 
+      modifier: "Sauce", 
+      selected: Item.Options.Sauce[0] 
+}) _%>
+
+    <table class="cheese-container">
+      <tr>
+        <td>
+          <h3>Select Cheese</h3>
+        </td>
+        <td>
+          <%- include("partials/Component__DropdownSelector", {
+                classname: "Cheese",
+                Options: Cheese.Mod,
+                id: "cheeseDropdownMenuButton",
+                selected: Item.Options.Cheese
+          }) _%>
+        </td>
+      </tr>
+    </table>
+<%- include("partials/Component__ToppingSelector", { 
+        Toppings, 
+        toIdName, 
+        selectedWhole: Item.Options.Toppings.Whole, 
+        selectedRight: Item.Options.Toppings.Right, 
+        selectedLeft: Item.Options.Toppings.Left
+}) _%>
+</div>
+    
+
+    <script>
+    const selectMod = selectors => {
+      $.ajax({
+        method: "POST",
+        async: true, 
+        url: "edit",
+        contentType: "application/json",
+        data: JSON.stringify({
+          selectors, 
+          idx: <%- cartIdx %>
+        }),
+        success: function() {
+          location.reload();
+        }
+      });
+    }      
+    </script>
