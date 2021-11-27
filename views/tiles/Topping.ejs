@@ -1,0 +1,15 @@
+<%# [Topping Tiles Component]  _%>
+<%# checkedWhole: Array        _%>
+<%# checkedRight: Array        _%>
+<%# checkedLeft: Array         _%>
+<%# Toppings: Object           _%>
+<%# type: String %>
+
+<%_ Toppings.forEach((topping, idx) => { _%>
+          <div class="topping-checkbox lead">
+            <span onclick="selectMod({ modifier: 'Toppings', options: ['Left' , '<%- type %>', '<%- topping %>'] })" class="circle half-circle-left<% if(checkedLeft[idx] !== undefined) { %> op-100<% } else { %> op-25 <% } %>"></span>
+            <span onclick="selectMod({ modifier: 'Toppings', options: ['Whole', '<%- type %>', '<%- topping %>'] })" class="circle full-circle<% if(checkedWhole[idx] !== undefined) { %> op-100<% } else { %> op-25 <% } %>"></span>
+            <span onclick="selectMod({ modifier: 'Toppings', options: ['Right', '<%- type %>', '<%- topping %>'] })" class="circle half-circle-right<% if(checkedRight[idx] !== undefined) { %> op-100<% } else { %> op-25 <% } %>"></span>              
+            <span class="w-25"><%- topping %></span>
+          </div>          
+<%_ }) _%>

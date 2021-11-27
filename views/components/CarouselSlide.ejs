@@ -1,0 +1,43 @@
+<%_ if(typeof active === "undefined") { _%>
+  <%_ active = false; _%>
+<%_ } _%>
+
+<%_ if(typeof size === "undefined") { _%>
+  <%_ size = 0; _%>
+<%_ } %>
+
+<%_ if(typeof placeLeft === "undefined") { _%>
+  <%_ placeLeft = false; _%>
+<%_ } _%>
+
+
+<%_ let price = Menu[cat][item].Price[size]; _%>
+<%_ let img = Menu[cat][item].Image; _%>
+<%_ priceSplit = price.toFixed(2).split("."); _%>
+
+      <div class="carousel-item item m-0 p-0 <% if (active===true) { %> active <% } %>">
+        <div style="position: absolute; color: #fff; top: 20%; <% if (placeLeft === false) { %> right: 5%; text-align: right; <% } else { %> left: 5%; <% } %>  align-self: center; line-height: 1; align-items:center; display: flex; max-height: 250px;">
+          <div>
+            <span class="lead text-uppercase text-shadow"><%- item %> <% if(cat === "Pizzas") {%>PIZZA<% } %></span>
+            <h1 style="text-shadow: 0px 2px 4px black;"><% if(cat !== "Sides") { %> One <% } %> <%- size !== 0 ? size : "" %> <%- item %></h1>
+            <span>
+              <h1>
+                <span class="display-1 carousel-price" style="text-shadow: 0px 2px 3px black;">
+                $<%- priceSplit[0] %><span class="display-4" style="position: relative; bottom: 15px;">.<%- priceSplit[1] %></span>
+                </span>
+                
+                <%- include("OrderButton", {
+                  cat,
+                  item,
+                  size
+                }) _%>
+                
+              </h1>
+            </span>
+          </div>
+         
+        </div>
+        
+        <img src="<%- img _%>" class="p-0" alt="Image">
+      </div>
+  

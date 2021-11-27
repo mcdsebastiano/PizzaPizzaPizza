@@ -1,0 +1,44 @@
+<%# [Display Item Page] _%> 
+<%# URL: String _%>
+<%# Path: String _%>
+<%# Category: Object _%>
+<%# item: String _%>
+<% let sizes = Object.keys(category[item].Price) %>
+
+        <h1><%- item _%></h1>
+        <p class="pl-4">
+          <%- category[item].Description %>
+        </p>
+      <div class="align-items-center">  
+
+        <div class="row">        
+         <% if(category[item].Image !== "" && typeof category[item].Image !== "undefined") { %> 
+          <div class="col-sm-8" style="text-align: center;">
+            <img src="<%- category[item].Image _%>" alt="" class="img-fluid" />
+          </div>
+          <% } %>
+          <div id="price-selector" class="col align-self-center">
+          
+            <%- include("components/PriceSelector", { sizes }) %>
+            
+            <div class="col-sm text-center">
+                <h3 id="price"><%- category[item].Price[sizes[0]].toFixed(2) %></h3>
+            
+                <%- include("components/OrderButton", {
+                      cat: categoryString,
+                      item,
+                      size: sizes[0]})
+                %>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <%# needs to be removed eventually %>
+      <% if(typeof category[item]._image_attribution !== "undefined") { %>
+        <p class="text-center"><a href="http://freepik.com/photos/food"><span class="small"><%- category[item]._image_attribution %></span></a></p>
+      <% } %>
+  
+  
+    <script src="/js/priceSelector.js"></script>

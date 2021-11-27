@@ -1,0 +1,253 @@
+@import url(http://fonts.googleapis.com/css2?family=Alegreya&display=swap);
+@import "./vendor";
+
+$alegreya: "Alegreya", serif;
+
+.text-shadow {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.carousel-sidebar  {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    /* max-height: 39vh; */
+    /* min-height: 30vh; */
+    /* height: 25vh; */
+    width: 100%;
+}
+
+iframe {
+    min-height: 25vh;
+}
+
+* {
+    /* margin: 0; */
+    /* padding: 0 !important; */
+    font-size: 12pt;
+    font-family: $alegreya;
+}
+
+/* .container { */
+    /* max-width: 100%; */
+    /* padding: 0; */
+    /* margin: 0 !important; */
+/* } */
+
+.op-25 {
+    opacity: 0.25;
+}
+
+.op-100 {
+    opacity: 1;
+}
+
+ul {
+    white-space: nowrap !important;
+    list-style: none;
+}
+
+a {
+    color: gray !important;  
+    text-decoration: none !important;
+    &:hover {
+        color: var(--dark) !important;
+    }
+}
+
+footer {
+    background-color: #f2f2f2;
+}
+
+nav {
+    border-radius: 0px !important;
+    a {
+        font-size: 1.2em;
+        color: gray !important;
+        text-decoration: none !important;
+        text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+        &:hover {
+            color: #dadedd !important;
+        }
+        &.navbar-brand {
+            font-size: 1.5em !important
+        }
+    }
+}
+
+.navbar-nav li {
+    max-width: 75px;
+    padding: 0em 1em 0em 1em;
+}
+
+.button-container>a {
+    color: var(--light) !important;
+}
+
+.carousel-inner {
+    /* height: 65vh; */
+    
+}
+
+.carousel-height {
+    max-height: 70vh;
+    /* width: 100%; */
+}
+
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+    /* height: vh; */
+    /* height: 65vh; */
+}
+
+.breadcrumb {
+    background-color: white !important;
+    border-radius: 0px !important;
+    margin: 1em !important;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.content ul li:hover {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold {
+    font-weight: 400;
+}
+
+table button {
+    margin: 2em;
+}
+
+.order-button {
+    color: var(--light) !important;
+    outline: none;
+}
+
+.sides {
+    &.chickenwings-bg {
+        background-image: url('/images/sides/chickenwings.jpg'); 
+    }
+}
+.pizzas {
+    &.pepperoni-bg {
+        background-image: url('/images/pizzas/pepperoni.jpg');
+    }
+    &.greek-bg {
+        background-image: url("/images/pizzas/greek.jpg");
+    }
+}
+
+.main-menu-link  {
+   
+    background-position: center;
+    background-size: 165% auto;
+    overflow: hidden;
+    font-size: 24pt;
+    background-repeat: no-repeat;
+ 
+    
+    h1 {
+        color: white;
+        line-height: 1.5;
+        display: inline-block;
+        vertical-align: center;
+    }
+    &.line {
+        line-height: 100%;
+        &.height {
+            height: 100%;
+        }
+    }
+    &.height {
+        height: 100%;
+    }
+   
+}
+
+.cartitems {
+    position: relative; 
+    top: 30%;
+    right: 5%;
+}
+
+.checked {
+    opacity: 1;
+}
+
+.topping-checkbox { 
+    display: flex;
+    flex-direction: columns;
+    justify-content: left;
+    align-items: center;
+    height: 75px;
+}
+
+.circle {  
+    margin: 0.5em;
+    display: block;
+    border: 1px solid gray;
+    background-color: lightgray;
+    display: block;
+    width: 12px;
+    height: 24px;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.circle:hover {
+    opacity: 1;
+}
+
+.half-circle-right {
+    border-bottom-right-radius: 24px;
+    border-top-right-radius: 24px;
+    border-left: 0;
+}
+.half-circle-left {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    border-right: 0;
+}
+.full-circle {
+    border-radius: 24px;
+    width:24px;
+    height: 24px;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.quantity-modifier {
+    cursor: pointer;
+}
+
+
+.price-selector-option {
+    cursor: pointer;
+    width: 75px; 
+    height: 75px; 
+    outline: none;
+}
+
+.pizza-profile {
+    width: 750px;  
+}
+
+.active {
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.5) !important;
+}
+
+@media (max-width: 540px) {
+    
+}

@@ -1,0 +1,59 @@
+<!-- // @Cleaup -->
+<%# [Cart Tile Component] _%>
+<%# cartItem : Object    _%>
+<%# id       : Number    _%>
+<%# start    : Number    _%>
+<%# count    : Number    _%>
+
+<% const { category, Options, keys, size, name, count } = item %>
+
+<div class="border rounded mb-4 mt-4">
+  <div style="display: flex; flex-direction: columns;">
+<% if(!Path.includes("add")) { %> 
+    <span class="m-2" style="align-self: center;">
+      <input type="text" data-id="<%- idx  %>" name="count" class="input-count" size="1" maxlength="1" value="<%- count %>">
+    </span>
+<% } %>  
+    <span class="m-2" style="align-self: center; font-size: 18pt; min-width: 50px; "><% if(size !== "0") { %> <%- size %> <% } %></span>
+    <span class="m-2" style="align-self: center; font-size: 18pt; width: 100%; overflow: hidden; white-space: no-wrap; text-overflow: ellipsis;"><%- name %></span>
+    <span id="item-<%- idx %>-price" class="m-2" style="font-size: 18pt; align-self: center;">
+    $<%_ if(Path.includes("add")) { _%><%- item.getFixedPrice() _%><%_ } else { _%><%-  item.getTotalFixedPrice() _%><%_ }_%>
+    </span>
+<% if(!Path.includes("add")) { %> 
+    <span style="font-size: 31pt; height: 90%; display: flex; flex-direction: column; align-items: center; justify-content:center;" class="mr-2">
+      <button class="item-remover" data-id="<%- idx %>" style="border: none; outline: none; background: none;">&times</button>
+    </span>
+<% } %>
+  </div>
+  <% if(!Path.includes("add")) { %> 
+  
+    <% if(category === "Pizzas") { %>
+      <div
+      class="bg-light text-secondary p-2 m-2 border collapse show"
+      id="item-<%- idx %>"
+      style="font-size: 10pt; position: static; left: 0; right: 0;">
+      
+      <% let key = "Toppings" %>
+      <strong><%- key %></strong><br />
+      <span style="padding-left: 8px;">Whole: <p style="padding-left: 16px; padding-top: 8px; max-width: 500px; text-align: justify"><%- Options[key].Whole.join(", "); %></p></span>
+      <span style="padding-left: 8px;">Left:  <p style="padding-left: 16px; padding-top: 8px; max-width: 500px; text-align: justify"><%- Options[key].Left.join(", "); %>  </p></span>
+      <span style="padding-left: 8px;">Right: <p style="padding-left: 16px; padding-top: 8px; max-width: 500px; text-align: justify"><%- Options[key].Right.join(", "); %></p></span>
+      <% key = "Cheese" %>
+      <strong><%- key %></strong><br />
+      <span style="padding-left: 8px;"><%- Options[key] _%></span>
+      <br />
+      
+      <% key = "Sauce" %>
+      <strong><%- key %></strong><br />
+      <span style="padding-left: 8px;"><% if(Options[key][1] !== "None") { %><%- Options[key][0] _%>, <% } %><%- Options[key][1] %></span>
+      <br />      
+      <% key = "Crust" %>
+      <strong><%- key %></strong><br />
+      <span style="padding-left: 8px;"><%- Options[key] _%></span>
+      <br />            
+      <br />            
+      <a href="/order/edit?id=<%- idx %>">Modify Pizza</a>
+    </div>
+    <% } %>
+    <% } %>
+</div>

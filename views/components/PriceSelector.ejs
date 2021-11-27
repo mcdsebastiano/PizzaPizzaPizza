@@ -1,0 +1,12 @@
+<%# [Price Selector Component] _%>
+<%# URL: String _%>
+<%# sizes: Array _%>
+            <div class="card border-0 row">
+              <div class="card border-0 col">
+              <%_ sizes.forEach((size, i) => { _%>
+                <span class="price-selector-option mt-2 border d-flex justify-content-center align-items-center rounded-circle d-block align-self-center<%_ if(i === 0) { %> active <%_ } _%><%_ if(sizes.length <= 1) { %> invisible <%_ } _%>"><%- size %></span>
+              <%_ }); _%>
+              </div>
+            
+            </div>
+         

@@ -5,6 +5,7 @@
 
 <%_ for (let category of MenuCategories) { _%>
   <% if(category !== "Options") { _%>
-    <%- include("partials/Tile__Menu", { Items: Object.entries(Menu[category]), category }); _%>  
+    <%- include("tiles/Menu", { Items: Object.entries(Menu[category]), category }); _%>  
   <%_ } _%>
 <%_ } _%>
+<br />

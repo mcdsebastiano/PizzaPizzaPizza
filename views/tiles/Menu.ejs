@@ -1,0 +1,17 @@
+<%# [Menu Tiles Component] _%>
+<%# Path     : String      _%>
+<%# Items    : Array       _%>
+<%# Category : String      _%>
+
+    <h1><%- category _%></h1>
+    <div style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill,minmax(300px,1fr))">
+    <%_ Items.forEach((item, i) => { _%>
+    <%_ const categoryPath = category.replace(/\s/g, "_") _%>
+    <%_ const link = item[0].replace(/\s/g, "_") _%>
+    <a href="<%- Path %>/<%- categoryPath %>/<%- link %>" class="card  col-sm">
+      <h3><%- item[0] %></h3>
+      <p><%- item[1].Description %></p>        
+    </a>
+    <%_ }); _%>
+    </div>
+    <br />

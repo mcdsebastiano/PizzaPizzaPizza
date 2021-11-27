@@ -1,0 +1,48 @@
+<%# [Header Component] _%>
+<%_ const toProperCase = str => str.replace(/\w+/g, txt => `${txt.charAt(0).toUpperCase()}${txt.substr(1).toLowerCase()}`) _%>
+<%_ const underscoreToSpaces = str => str.replace(/_/g, " ") _%>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3 m-0">
+        <div class="navbar-header">
+            <a href="/order">
+                <i class="fas fa-shopping-cart fa-lg m-2"></i>
+                <%_ if(Cart.length > 0) { %>
+                    <div class="badge text-light bg-secondary border cartitems"><%- Cart.totalCount _%></div>
+                <%_ } _%>
+            </a>
+            <a class="navbar-brand" href="/">PizzaPizzaPizza</a>
+        </div>
+           
+       <button type="button" class="navbar-toggler btn btn-dark" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+            
+        <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav ml-auto align-items-center">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/About">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Menu">Menu</a></li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fab fa-facebook-square fa-lg"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+   <%_ if (Crumbs.length >= 1) { _%>
+    <div aria-label="breadcrumb">
+        <ol class="breadcrumb p-0 m-0">
+            <li class="breadcrumb-item m-0 p-0"><a href="/">Home</a></li>
+            <%_ Crumbs.filter(crumb => !crumb.includes("?") && !crumb == "").forEach((link, i) => { _%>
+            <li class="breadcrumb-item m-0 p-0"><a href="/<%- Crumbs.slice(0, i + 1).join("/") %>"><%- toProperCase(underscoreToSpaces(link)) %></a></li>
+            <%_ }); _%>
+        </ol> 
+    </div>
+    <%_ } _%>
