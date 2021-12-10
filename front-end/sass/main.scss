@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css2?family=Alegreya&display=swap);
+@import "http://fonts.googleapis.com/css2?family=Alegreya&display=swap";
 @import "./vendor";
 
 $alegreya: "Alegreya", serif;
@@ -147,7 +147,8 @@ table button {
 }
 
 .main-menu-link  {
-   
+    border-right:1px solid $secondary;
+    border-bottom:1px solid $dark;
     background-position: center;
     background-size: 165% auto;
     overflow: hidden;
